@@ -73,9 +73,9 @@ return array(
 	/**
 	 * Localization & internationalization settings
 	 */
-	'language'           => 'en', // Default language
-	'language_fallback'  => 'en', // Fallback language when file isn't available for default language
-	'locale'             => 'en_US', // PHP set_locale() setting, null to not set
+	'language'           => 'ja', // Default language
+	'language_fallback'  => 'ja', // Fallback language when file isn't available for default language
+	'locale'             => 'ja_JP', // PHP set_locale() setting, null to not set
 
 	'encoding'  => 'UTF-8',
 
@@ -86,7 +86,7 @@ return array(
 	 * default_timezone		optional, if you want to change the server's default timezone
 	 */
 	'server_gmt_offset'  => 0,
-	'default_timezone'   => 'UTC',
+	'default_timezone'   => 'GMT',
 
 	/**
 	 * Logging Threshold.  Can be set to any of the following:
@@ -106,7 +106,7 @@ return array(
 	 * Security settings
 	 */
 	'security' => array(
-		'csrf_autoload'    => false,
+		'csrf_autoload'    => true,
 		'csrf_token_key'   => 'fuel_csrf_token',
 		'csrf_expiration'  => 0,
 		'uri_filter'       => array('htmlentities'),
@@ -210,7 +210,8 @@ return array(
 		 * );
 		 */
 		'packages'  => array(
-			//'orm',
+			'auth',
+			'orm',
 		),
 
 		/**
